@@ -60,7 +60,7 @@ const sendContact = async (req, res) => {
       `,
     };
 
-    await transporter.sendMail(mailOptions);
+    // await transporter.sendMail(mailOptions);
 
     res.status(200).json({
       success: true,
