@@ -20,9 +20,9 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: true,
     credentials: true,
-  })
+  }),
 );
 
 //  ROUTES
@@ -31,7 +31,7 @@ app.use("/api/contact", contactRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/agent", agentRoutes);
 
-// AUTH CHECK 
+// AUTH CHECK
 const jwt = require("jsonwebtoken");
 
 app.get("/api/auth/me", (req, res) => {
@@ -53,7 +53,6 @@ app.get("/api/auth/me", (req, res) => {
     res.status(401).json({});
   }
 });
-
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
