@@ -14,7 +14,7 @@ import TrustAndSafety from "../pages/services/TrustAndSafety";
 import ServicesLayout from "../layouts/ServicesLayout";
 
 import IndustriesLayout from "../layouts/IndustriesLayout";
-import SocialMedia from "../pages/industries/SocialMedia";
+import SocialMedia from "../pages/Industries/SocialMedia";
 import RetaileCommerce from "../pages/Industries/RetaileCommerce";
 import HealthCare from "../pages/Industries/HealthCare";
 import Technology from "../pages/Industries/Technology";
