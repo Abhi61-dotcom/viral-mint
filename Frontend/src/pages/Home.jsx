@@ -84,7 +84,7 @@ const Home = () => {
     return (
         <>
             {/* HERO SECTION */}
-            <div className="relative w-full min-h-screen flex flex-col-reverse md:flex-row items-center justify-between gap-5 px-5 sm:px-8 md:px-10 py-10 bg-[#020617] overflow-hidden">
+            <div className="relative w-full min-h-[calc(100vh-80px)] md:min-h-screen flex flex-col-reverse md:flex-row items-center justify-center md:justify-between gap-5 px-5 sm:px-8 md:px-10 py-10 bg-[#020617] overflow-hidden">
 
                 {/* 🎥 BACKGROUND VIDEO */}
                 <video
@@ -154,33 +154,6 @@ const Home = () => {
                     </div>
 
                 </div>
-
-                {/* RIGHT IMAGE */}
-                {/* <div className="relative z-10 w-full md:w-1/2 flex justify-center items-center">
-
-                    <div className="absolute w-[200px] sm:w-[260px] h-[200px] sm:h-[260px] bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-[100px] opacity-30"></div>
-
-                    <motion.img
-                        src={home1}
-                        alt="hero"
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{
-                            opacity: 1,
-                            scale: 1,
-                            y: [0, -10, 0],
-                        }}
-                        transition={{
-                            duration: 1,
-                            y: {
-                                duration: 4,
-                                repeat: Infinity,
-                                ease: "easeInOut",
-                            },
-                        }}
-                        className="relative z-10 w-[90%] sm:w-[75%] max-w-[420px] rounded-2xl shadow-2xl"
-                    />
-
-                </div> */}
 
             </div>
 
