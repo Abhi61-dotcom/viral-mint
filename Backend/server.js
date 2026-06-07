@@ -20,9 +20,9 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: true,
+    origin: "https://viral-mint-two.vercel.app",
     credentials: true,
-  }),
+  })
 );
 
 //  ROUTES
