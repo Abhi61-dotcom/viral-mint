@@ -17,7 +17,7 @@ const ForVenderSupplier = () => {
     setLoading(true); // ✅ ADD
 
     try {
-      await axios.post("http://localhost:8000/api/contact", data);
+      await axios.post("https://viral-mint.onrender.com/api/contact", data);
 
       toast.success("Message sent successfully ✅");
       resetForm();

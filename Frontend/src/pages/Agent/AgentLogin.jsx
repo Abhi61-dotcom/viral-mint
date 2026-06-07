@@ -16,7 +16,7 @@ export default function AgentLogin() {
     try {
       setLoading(true);
 
-      const res = await fetch("http://localhost:8000/api/admin/agent-login", {
+      const res = await fetch("https://viral-mint.onrender.com/api/admin/agent-login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

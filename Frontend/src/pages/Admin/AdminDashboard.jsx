@@ -24,8 +24,8 @@ export default function AdminDashboard() {
 
     const createAgent = async () => {
         const url = agentForm.id
-            ? `http://localhost:8000/api/admin/agent/${agentForm.id}`
-            : "http://localhost:8000/api/admin/create-agent";
+            ? `https://viral-mint.onrender.com/api/admin/agent/${agentForm.id}`
+            : "https://viral-mint.onrender.com/api/admin/create-agent";
 
         const method = agentForm.id ? "PUT" : "POST";
 
@@ -57,7 +57,7 @@ export default function AdminDashboard() {
         try {
             setLoading(true);
 
-            const res = await fetch("http://localhost:8000/api/admin/contacts", {
+            const res = await fetch("https://viral-mint.onrender.com/api/admin/contacts", {
                 credentials: "include",
             });
 
@@ -72,7 +72,7 @@ export default function AdminDashboard() {
     };
 
     const deleteItem = async (id) => {
-        await fetch(`http://localhost:8000/api/admin/contact/${id}`, {
+        await fetch(`https://viral-mint.onrender.com/api/admin/contact/${id}`, {
             method: "DELETE",
             credentials: "include",
         });
@@ -80,7 +80,7 @@ export default function AdminDashboard() {
     };
 
     const markCalled = async (id) => {
-        await fetch(`http://localhost:8000/api/admin/contact/${id}/called`, {
+        await fetch(`https://viral-mint.onrender.com/api/admin/contact/${id}/called`, {
             method: "PUT",
             credentials: "include",
         });
@@ -88,7 +88,7 @@ export default function AdminDashboard() {
     };
 
     const handleLogout = async () => {
-        await fetch("http://localhost:8000/api/admin/logout", {
+        await fetch("https://viral-mint.onrender.com/api/admin/logout", {
             method: "POST",
             credentials: "include",
         });
@@ -97,7 +97,7 @@ export default function AdminDashboard() {
     };
 
     const fetchAgents = async () => {
-        const res = await fetch("http://localhost:8000/api/admin/agents", {
+        const res = await fetch("https://viral-mint.onrender.com/api/admin/agents", {
             credentials: "include",
         });
         const result = await res.json();
@@ -108,7 +108,7 @@ export default function AdminDashboard() {
     const deleteAgent = async (id) => {
         if (!confirm("Are you sure to delete this agent?")) return;
 
-        await fetch(`http://localhost:8000/api/admin/agent/${id}`, {
+        await fetch(`https://viral-mint.onrender.com/api/admin/agent/${id}`, {
             method: "DELETE",
             credentials: "include",
         });
@@ -131,7 +131,7 @@ export default function AdminDashboard() {
     const assignAgent = async (contactId, agentId) => {
         console.log("ASSIGN:", contactId, agentId); // debug
 
-        const res = await fetch(`http://localhost:8000/api/admin/contact/${contactId}/assign`, {
+        const res = await fetch(`https://viral-mint.onrender.com/api/admin/contact/${contactId}/assign`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -152,7 +152,7 @@ export default function AdminDashboard() {
         }
 
         const res = await fetch(
-            `http://localhost:8000/api/admin/agent/${selectedAgentId}/reset-password`,
+            `https://viral-mint.onrender.com/api/admin/agent/${selectedAgentId}/reset-password`,
             {
                 method: "PUT",
                 headers: {

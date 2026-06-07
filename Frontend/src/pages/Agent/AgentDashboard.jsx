@@ -14,7 +14,7 @@ export default function AgentDashboard() {
 
     const fetchAgent = async () => {
         try {
-            const res = await fetch("http://localhost:8000/api/agent/me", {
+            const res = await fetch("https://viral-mint.onrender.com/api/agent/me", {
                 credentials: "include",
             });
 
@@ -39,7 +39,7 @@ export default function AgentDashboard() {
     });
 
     const fetchData = async () => {
-        const res = await fetch("http://localhost:8000/api/agent/my-contacts", {
+        const res = await fetch("https://viral-mint.onrender.com/api/agent/my-contacts", {
             credentials: "include",
         });
         const result = await res.json();
@@ -47,7 +47,7 @@ export default function AgentDashboard() {
     };
 
     const markCalled = async (id) => {
-        await fetch(`http://localhost:8000/api/agent/contact/${id}/called`, {
+        await fetch(`https://viral-mint.onrender.com/api/agent/contact/${id}/called`, {
             method: "PUT",
             credentials: "include",
         });
@@ -55,7 +55,7 @@ export default function AgentDashboard() {
     };
 
     const handleLogout = async () => {
-        await fetch("http://localhost:8000/api/admin/logout", {
+        await fetch("https://viral-mint.onrender.com/api/admin/logout", {
             method: "POST",
             credentials: "include",
         });
@@ -64,7 +64,7 @@ export default function AgentDashboard() {
 
     const handleChangePassword = async () => {
         try {
-            const res = await fetch("http://localhost:8000/api/agent/change-password", {
+            const res = await fetch("https://viral-mint.onrender.com/api/agent/change-password", {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",

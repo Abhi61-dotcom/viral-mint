@@ -8,7 +8,7 @@ export default function ProtectedRoute({ children, role }) {
     useEffect(() => {
         const checkAuth = async () => {
             try {
-                const res = await fetch("http://localhost:8000/api/auth/me", {
+                const res = await fetch("https://viral-mint.onrender.com/api/auth/me", {
                     credentials: "include",
                 });
 
