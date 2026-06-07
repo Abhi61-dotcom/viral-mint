@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { BrainCircuit, BarChart3, Star, ChevronDown } from "lucide-react";
-import hero from "../../assets/industries/Healthcare/heroimg.png";
+import hero from "../../assets/industries/HealthCare/heroimg.png";
 import memberPatient from "../../assets/industries/HealthCare/memberPatientSupport.jpg"
 import providerPayor from "../../assets/industries/HealthCare/providerPayorServices.jpg"
 import specialityCare from "../../assets/industries/HealthCare/speciality&care.jpg"
